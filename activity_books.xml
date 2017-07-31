@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.resit.sdgp.bookstore.BookActivity">
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="322dp"
+        android:layout_height="30dp"
+        android:text="Author name"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="316dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Book name"
+        tools:layout_editor_absoluteY="47dp"
+        tools:layout_editor_absoluteX="27dp"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/textViewAuthor"
+        android:layout_alignStart="@+id/textViewTracks" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarRating"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/addTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="97dp"
+        android:layout_above="@+id/textViewAuthor"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginBottom="17dp" />
+
+    <TextView
+        android:id="@+id/textViewTracks"
+        android:layout_width="238dp"
+        android:layout_height="26dp"
+        android:text="Tracks"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="254dp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/listAuthors" />
+
+    <ListView
+        android:id="@+id/listAuthors"
+        android:layout_width="330dp"
+        android:layout_height="206dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="289dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarRating"
+        android:layout_width="351dp"
+        android:layout_height="37dp"
+        android:layout_weight="1"
+        android:max="5"
+        tools:layout_editor_absoluteY="149dp"
+        tools:layout_editor_absoluteX="12dp"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"></SeekBar>
+
+    <TextView
+        android:id="@+id/textViewRating"
+        android:layout_width="346dp"
+        android:layout_height="29dp"
+        android:text="1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="199dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignStart="@+id/textViewTracks" />
+
+
+</RelativeLayout>
